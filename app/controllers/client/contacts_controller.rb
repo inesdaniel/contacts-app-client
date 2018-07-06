@@ -10,4 +10,19 @@ class Client::ContactsController < ApplicationController
     @contact = response.body
     render "show.html.erb"
   end
+  def new
+    render "new.html.erb"
+  end
+  def create
+    response = Unirest.post("http://localhost:3000/api/contacts",
+      parameters: {
+        first_name: params[:input_first_name],
+        last_name: params[:input_last_name],
+        email: params[:input_email],
+        phone_number: params[:input_phone_number]
+      }
+    )
+    @contact = response.body
+    render "show.html.erb"
+  end
 end

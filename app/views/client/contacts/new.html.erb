@@ -1,0 +1,17 @@
+Form:
+
+<%= form_tag "/client/contacts", method: :post do %>
+  <div>
+    First Name: <input type="text" name="input_first_name">
+  </div>
+  <div>
+    Last Name: <input type="text" name="input_last_name">
+  </div>
+  <div>
+    Email: <input type="text" name="input_email">
+  </div>
+  <div>
+    Phone Number: <input type="text" name="input_phone_number">
+  </div>
+  <input type="submit" value="Create a new contact">
+<% end %>
