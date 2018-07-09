@@ -1,9 +1,8 @@
-index page
-
 <% @contacts.each do |contact| %>
-  <p>First name: <%= contact["first_name"]%></p>
+  <p>First name: <a href="/client/contacts/<%= contact["id"]%>"><%= contact["first_name"]%></a> </p>
   <p>Last name: <%= contact["last_name"] %></p>
   <p>Email: <%= contact["email"] %></p>
-  <p>Phone number: <%= contact["phone_number"] %></p>
+  <p>Phone number: <%= contact["formatted"]["phone_number"] %></p>
+  <p>Updated at: <%= contact["formatted"]["updated_at"]%></p>
   <hr>
 <% end %>

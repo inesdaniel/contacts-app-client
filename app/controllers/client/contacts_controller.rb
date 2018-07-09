@@ -30,7 +30,7 @@ class Client::ContactsController < ApplicationController
     contact_id = params[:id]
     response = Unirest.get("http://localhost:3000/api/contacts/#{contact_id}")
     @contact = response.body
-    flash[:succes] = "You edited a contact!"
+    flash[:success] = "You edited a contact!"
     render "edit.html.erb"
   end
   def update

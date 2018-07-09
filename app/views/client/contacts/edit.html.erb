@@ -1,5 +1,3 @@
-edit page
-
 <%= form_tag "/client/contacts/#{@contact["id"]}", method: :patch do %>
   <div>
     First Name: <input type="text" name="input_first_name" value="<%= @contact["first_name"]%>">

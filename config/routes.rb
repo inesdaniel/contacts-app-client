@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     get "/contacts/:id" => "contacts#show"
     get "/contacts/:id/edit" => "contacts#edit"
     patch "/contacts/:id" => "contacts#update"
-    get "/contacts/:id" => "contacts#destroy"
+    delete "/contacts/:id" => "contacts#destroy"
   end
 end
