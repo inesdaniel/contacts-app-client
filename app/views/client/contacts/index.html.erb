@@ -1,5 +1,6 @@
 <% @contacts.each do |contact| %>
   <p>First name: <a href="/client/contacts/<%= contact["id"]%>"><%= contact["first_name"]%></a> </p>
+  <p>Middle name: <%= contact["middle_name"]%></p>
   <p>Last name: <%= contact["last_name"] %></p>
   <p>Email: <%= contact["email"] %></p>
   <p>Phone number: <%= contact["formatted"]["phone_number"] %></p>
